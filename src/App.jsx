@@ -1,40 +1,25 @@
-function Header(){
-  return(
-     <header>
-        <h1>TIME TO PRACTICE</h1>
-        <p>One course,many goals! 🎯</p>
-     </header>
-  );
+export const userdata={
+  firstname: 'Abhinav',
+  lastname: 'Singh',
+  title: 'student',
 }
 
-function CourseGoal(props){
+export function User(){
   return(
-    <li>
-      <h2>{props.title}</h2>
-      <p>{props.description}</p>
-    </li>
+    <div id="user" data-testid="user">
+      <h2>{userdata.firstname} {userdata.lastname}</h2>
+      <p>{userdata.title}</p>
+    </div>
   );
 }
 
 function App(){
   return(
-   <div data-testid="app">
-    <section id="app">
-     <Header />
-     <main>
-        <ul>
-          <CourseGoal 
-           title="Learn React"
-           description="In-depth"
-          />
-          <CourseGoal 
-           title="Practice"
-           description="Practice working with React,components etc"
-          />
-        </ul>
-        </main>
-      </section>
-   </div>
+    <div id="app">
+      <h1>Time to Practice</h1>
+      <p>Welcome on board of this course! you got this💪</p>
+      <User />
+    </div>
   );
 }
 
